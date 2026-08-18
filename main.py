@@ -81,7 +81,7 @@ def main():
 
     train(model, loader, context_len, batch_size, steps, lr)
 
-    output = generate(model, vocab, "Once upon a time")
+    output = generate(model, vocab, "Once upon a time", max_new_tokens=config['max_new_tokens'])
     print(output)
 
 
